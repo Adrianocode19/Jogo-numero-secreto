@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+:root {
+    --font-family: 'PT Sans', sans-serif;
+    --bg-color: #04364A;
+    --primary-color: #64CCC5 ;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    font-family: var(--font-family);
+    position: relative;
+    box-sizing: border-box;
+    line-height: 1.3;
+    flex-wrap: wrap;
+}
+
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 4em;
+}
+
+h3 {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.mensagem {
+    font-size: 1.5em;
+    margin-top: 40px;
+}
+
+.box {
+    border: 2px solid var(--primary-color);
+    display: inline-block;
+    font-size: 4em;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 5px 5px;
+}
+
+.btn-jogar {
+    padding: 8px 15px;
+    border: 0;
+    background: var(--primary-color);
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 700ms;
+}
+.btn-jogar:hover {
+    font-size: 16px;
+}
+
+.btn-jogar:active {
+    border: 2px solid white;
+    transition: 0ms;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    padding: auto;
+    border: 2px solid;
+    border-radius: 2px;
+    width: 20em;
+    height: 2em;
+    margin-bottom: 0.5em;
+}
+
+@media (max-width: 1420px) {
+    .box {
+    max-width: 6ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 3em;
+    }
+    h1 {
+        font-size: 4.5em;
+    }
+    
+    h2 {
+        font-size: 3.5em;
+    }
+    
+    h3 {
+        font-size: 1.5em;
+        margin-top: 30px;
+    }
+
+    .mensagem {
+        font-size: 1.2em;
+        margin-top: 50px;
+    }
+    
+}
