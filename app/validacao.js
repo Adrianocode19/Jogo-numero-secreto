@@ -1,7 +1,7 @@
 function verificaValorValido(chute) {
     const numero = +chute;
 
-    if(chute === 'game over') {
+    if(chute.toUpperCase() === 'GAME OVER') {
         document.body.innerHTML = `
         <div class="game-over-tela">
             <h2 class="game-over-titulo">GAME OVER</h2>
