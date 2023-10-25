@@ -1,7 +1,21 @@
 function verificaValorValido(chute) {
     const numero = +chute;
 
-    if(chuteInvalido(numero)) {
+    if(chute === 'game over') {
+        document.body.innerHTML = `
+        <div class="game-over-tela">
+            <h2 class="game-over-titulo">GAME OVER</h2>
+            <h3 class="game-over-subtitulo">O número secreto era ${numeroSecreto}</h3>
+
+            <button id="jogar-novamente" class="btn-jogar game-over-btn">Jogar novamente</button>
+        
+            <footer class="game-over-rodape">
+                <a href="https://github.com/Adrianocode19" class="link game-over-link"><i class="fa-solid fa-code fa-beat-fade" style="color: white;"></i> Desenvolvido por Adriano Carlos</a>
+            </footer>
+        </div>`;
+        recognition.stop();
+
+    }else if(chuteInvalido(numero)) {
         elementoChute.innerHTML += '<div>Valor Inválido!</div>';
         return;
     }
@@ -19,7 +33,7 @@ function verificaValorValido(chute) {
         <button id="jogar-novamente" class="btn-jogar">Jogar novamente</button>
         
         <footer>
-            <h4>Desenvolvido por Adriano Carlos</h4>
+            <a href="https://github.com/Adrianocode19" class="link"><i class="fa-solid fa-code fa-beat-fade" style="color: #64CCC5;"></i> Desenvolvido por Adriano Carlos</a>
         </footer>`;
         recognition.stop();
     } else if(numero > numeroSecreto) {
@@ -43,9 +57,9 @@ function chuteMaiorOuMenor(numero) {
 }
 
 document.body.addEventListener('click', e => {
-    if(e.target.id == 'jogar-novamente') { // e.target.id retorna onde foi clicado dentro da pagina 
-        window.location.reload(); // Recarrega a pagína
+    if(e.target.id == 'jogar-novamente') { 
+        window.location.reload();
     }
 })
-
+console.log(numeroSecreto)
 
