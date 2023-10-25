@@ -61,5 +61,4 @@ document.body.addEventListener('click', e => {
         window.location.reload();
     }
 })
-console.log(numeroSecreto)
 
